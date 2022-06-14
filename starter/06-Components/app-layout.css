@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #343a40;
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: 80px 400px 1fr 250px;
+    grid-template-rows: 80px 1fr;
+    height: 100vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav, main, section, aside {
+    padding-top: 24px;
+}
+
+nav {
+    background-color: #343a40;
+    grid-row: 1 / -1;
+    color: white;
+}
+
+menu {
+    background-color: #7048e8;
+    color: white;
+    grid-column: 2 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.left-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.menu-item {
+    padding: 8px;
+    font-size: 12px;
+    background-color: #5f3dc4;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-trash {
+    padding: 8px;
+    background-color: #c2255c;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/*SIDE MENU*/
+
+section {
+    background-color: #e9ecef;
+    padding: 40px;
+
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.email-item {
+    background-color: #adb5bd;
+    height: 96px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+aside {
+    background-color: #e9ecef;
+}
+
+
