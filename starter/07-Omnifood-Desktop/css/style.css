@@ -14,7 +14,7 @@ Default: 1
 --- 02 COLORS
 - Primary brand color: #e67e22
 - Tints: #fdf2e9
-- Shades
+- Shades: #cf711f
 - Accents
 - Greys
 #555
@@ -45,25 +45,15 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Rubik", sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
 }
 
-.section-hero {
-    background-color: #fdf2e9;
-    padding: 9.6rem 0;
-}
-
-.hero-container {
-    max-width: 130rem;
-    margin: 0 auto; /*trick to center element;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 9.6rem;
-}
+/****************************************************************************/
+/*General Reusable Components*/
+/****************************************************************************/
 
 .heading-title {
     font-size: 5.2rem;
@@ -74,16 +64,11 @@ body {
     margin-bottom: 3.2rem;
 }
 
-.hero-description {
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 4.8rem;
-}
-
 .btn:link,
 .btn:visited {
     display: inline-block;
     font-size: 2rem;
+    font-weight: 600;
     padding: 1.6rem 3.2rem;
     text-decoration: none; /*To remove the underline of the link*/
     border-radius: 9px;
@@ -119,13 +104,139 @@ body {
     box-shadow: inset 0 0 0 3px white;
 }
 
+/*This is a helper class that when added take priority over other classes*/
+.margin-right-small {
+    margin-right: 2rem !important;
+}
+
+
+/****************************************************************************/
+/*Header*/
+/****************************************************************************/
+
+.logo {
+    height: 2.2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+
+    /*Because we want header to be sticky*/
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+
+
+/****************************************************************************/
+/*Navigation*/
+/****************************************************************************/
+
+.top-nav-list {
+    list-style: none; /*To remove the bullet dot*/
+    display: flex;
+    align-items: center;
+    gap: 3.2rem
+}
+
+.top-nav-link:link,
+.top-nav-link:visited {
+    text-decoration: none; /*To remove the underline from the link*/;
+    color: #333;
+    display: inline-block; /*Best practice for links to be able to add padding*/
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s; /*The transition to Hover will take 0.3 seconds*/
+}
+
+.top-nav-link:hover,
+.top-nav-link:active {
+    color: #cf711f;
+}
+
+/*Without a space means it's not a descendent. It should be present in the same class
+both classes.*/
+.top-nav-link.top-nav-btn-cta:link,
+.top-nav-link.top-nav-btn-cta:visited {
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: white;
+    /*Since the specificity is higher (0, 3, 0) than the .top-nav-link:link
+       (0, 2, 0), this color will apply.*/;
+    background-color: #e67e22;
+}
+
+.top-nav-link.top-nav-btn-cta:hover,
+.top-nav-link.top-nav-btn-cta:active {
+    background-color: #cf711f;
+}
+
+
+/****************************************************************************/
+/*Hero Section*/
+/****************************************************************************/
+
+.section-hero {
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero-container {
+    max-width: 130rem;
+    margin: 0 auto; /*trick to center element;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+    padding: 0 3.2rem;
+}
+
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+
 .hero-image {
     width: 100%;
 }
 
-/*This is a helper class that when added take priority over other classes*/
-.margin-right-small {
-    margin-right: 2rem !important;
+
+.delivered-meals {
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    gap: 1.6rem
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+    margin-right: 0;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.delivered-text span {
+    color: #cf711f;
+    font-weight: 700;
 }
 
 
