@@ -6,9 +6,20 @@
 
 - Font Weights
 Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
 
 - Line heights
 Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+
+- Letter Spacing
+-0.5px
+1px
 
 
 --- 02 COLORS
@@ -24,6 +35,7 @@ Default: 1
 --- 05 SHADOWS
 
 --- 06 BORDER-RADIUS
+Default: 9px;
 
 --- 07 WHITESPACE
 
@@ -55,14 +67,65 @@ body {
 /*General Reusable Components*/
 /****************************************************************************/
 
-.heading-title {
-    font-size: 5.2rem;
-    font-weight: 700;
-    line-height: 1.05;
+.container {
+    max-width: 120rem; /*A conventional value. Similar to 1140px, since we have padding*/
+    margin: 0 auto; /*Auto gives automatically the same margin to the left and right side*/
+    padding: 0 3.2rem; /*Avoid the content to be glued to the side*/
+}
+
+.grid-template {
+    display: grid;
+    gap: 9.6rem;
+}
+
+/*Double hyphen (dash) to show it's a variation of a class*/
+.grid-template--2-columns {
+    grid-template-columns: repeat(2, 1fr); /*The exact thing as witting 1fr 1fr*/;
+}
+
+.grid-template--3-columns {
+    grid-template-columns: repeat(3, 1fr); /*The exact thing as witting 1fr 1fr 1fr*/;
+}
+
+.grid-template--4-columns {
+    grid-template-columns: repeat(4, 1fr); /*The exact thing as witting 1fr 1fr 1fr 1fr*/;
+}
+
+.heading-title,
+.heading-secondary {
     color: #333;
     letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+
+.heading-title {
+    font-size: 5.2rem;
+    line-height: 1.05;
     margin-bottom: 3.2rem;
 }
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 9.6rem;
+}
+
+.sub-heading {
+    display: block;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 1px;
+}
+
 
 .btn:link,
 .btn:visited {
@@ -185,9 +248,11 @@ both classes.*/
 
 .hero-container {
     max-width: 130rem;
+    /*It's a good practice to let the hero section be slightly larger
+       than the default container width of 120rem*/
     margin: 0 auto; /*trick to center element;*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr;*/
     align-items: center;
     gap: 9.6rem;
     padding: 0 3.2rem;
@@ -238,6 +303,37 @@ both classes.*/
     color: #cf711f;
     font-weight: 700;
 }
+
+
+/****************************************************************************/
+/*How it works*/
+/****************************************************************************/
+
+.how-it-works {
+    padding: 9.6rem 0;
+}
+
+.step-img {
+    width: 50%;
+}
+
+
+/*.how-it-works div:nth-child(1) {
+    background-color: aqua
+}
+.how-it-works div:nth-child(2) {
+    background-color: blue
+}
+.how-it-works div:nth-child(3) {
+    background-color: violet
+}
+.how-it-works div:nth-child(4) {
+    background-color: yellow
+}*/
+
+
+
+
 
 
 
