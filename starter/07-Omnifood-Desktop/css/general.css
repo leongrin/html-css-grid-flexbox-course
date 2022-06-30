@@ -97,7 +97,8 @@ body {
 }
 
 .heading-title,
-.heading-secondary {
+.heading-secondary,
+.sub-heading {
     color: #333;
     letter-spacing: -0.5px;
     font-weight: 700;
@@ -178,3 +179,39 @@ body {
 .margin-right-small {
     margin-right: 2rem !important;
 }
+
+strong {
+    font-weight: 500;
+}
+
+.link-site-color:visited,
+.link-site-color:link {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px; /*give a distance from the text to the underline border*/
+    transition: all 0.3s;
+}
+
+.link-site-color:hover,
+.link-site-color:active {
+    color: #cf711f;
+    border-bottom: 1px solid transparent; /*removing underline when hovering*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
