@@ -323,7 +323,7 @@ both classes.*/
     transition: all 0.4s; /*for the hover movement*/
 }
 
-.meal:hover{
+.meal:hover {
     /*Move the cards when hover. First horizontally and second value vertically*/
     transform: translateY(-2rem);
     box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
@@ -386,8 +386,67 @@ both classes.*/
 }
 
 
+/****************************************************************************/
+/*TESTIMONIALS SECTION*/
+/****************************************************************************/
 
+.section-testimonials {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    align-items: center;
+    background-color: #fdf2e9;
+}
 
+.testimonial-container {
+    padding: 9.6rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+    column-gap: 8rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.single-testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
+
+.testimonial-image {
+    width: 6.4rem;
+    border-radius: 100%;
+}
+
+.testimonial-author {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 2rem;
+}
+
+.gallery-pic {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.gallery-pic:hover {
+    /*Move the cards when hover. First horizontally and second value vertically*/
+    transform: scale(1.2);
+}
+
+.zoom-effect {
+    overflow: hidden;
+}
 
 
 

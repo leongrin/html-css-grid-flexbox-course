@@ -96,6 +96,10 @@ body {
     align-items: center;
 }
 
+.grid-template--col-gap-zero {
+    column-gap: 0;
+}
+
 .heading-title,
 .heading-secondary,
 .sub-heading {
