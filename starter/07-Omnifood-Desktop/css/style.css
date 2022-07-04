@@ -166,7 +166,7 @@ both classes.*/
 }
 
 
-/*Pseudo-elements add child elements to parents*/
+/*Pseudo-elements (::) add child elements to parents*/
 .step-img-box::before,
 .step-img-box::after {
     content: ''; /*To appear on the page it needs to have some content, even if it's empty*/
@@ -189,7 +189,7 @@ both classes.*/
     /*60% of parents width*/
     padding-bottom: 60%; /*A trick to give the height of 60% and build the square*/
     background-color: #fdf2e9;
-    z-index: -2;
+    z-index: -2; /*Defines which element appears above or below each*/
 }
 
 
@@ -266,26 +266,6 @@ both classes.*/
     margin-bottom: 3.2rem;
 }
 
-.meal-attributes {
-    list-style: none; /*getting rid of the bullet points*/
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.meal-bullet {
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-}
-
-.meal-icon {
-    height: 2.4rem;
-    width: 2.4rem;
-    color: #e67e22; /*It could be stroke or fill, depending on the icon*/
-}
-
 .tag {
     display: inline-block;
     padding: 0.4rem 0.8rem;
@@ -350,26 +330,6 @@ both classes.*/
     color: #333;
     font-weight: 700;
     margin-bottom: 3.2rem;
-}
-
-.diet-list {
-    list-style: none; /*getting rid of the bullet points*/
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.diet-list-icon {
-    height: 3rem;
-    width: 3rem;
-    color: #e67e22; /*It could be stroke or fill, depending on the icon*/
-}
-
-.diet-list-bullet {
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
 }
 
 
@@ -447,6 +407,131 @@ both classes.*/
 .zoom-effect {
     overflow: hidden;
 }
+
+
+/****************************************************************************/
+/*PRICING*/
+/****************************************************************************/
+
+.pricing {
+    padding: 9.6rem 0;
+}
+
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6.4rem;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    border: 2px solid #fdf2e9;
+    border-radius: 11px;
+    padding: 4.8rem;
+}
+
+.price-card--background-color {
+    background-color: #fdf2e9;
+}
+
+.price-card--starter {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.price-card--complete {
+    margin-left: 0;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-value {
+    font-size: 6.2rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 2rem
+}
+
+.price-text {
+    font-size: 1.6rem;
+    color: #6f6f6f;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+.price-text--footnote {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.price-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+}
+
+.price-list-item {
+    font-size: 1.8rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.price-card--complete::after {
+    content: 'Best Value';
+    background-color: #ffd43b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 0.8rem 8rem;
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 6%;
+    right: -20%;
+    transform: rotate(45deg);
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-icon {
+    color: #e67e22;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    background-color: #fdf2e9;
+    padding: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.head-benefits {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.text-benefits {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
 
 
 

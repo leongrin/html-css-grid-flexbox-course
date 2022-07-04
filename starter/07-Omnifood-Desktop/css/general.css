@@ -138,6 +138,11 @@ body {
     letter-spacing: 1px;
 }
 
+.subheading--bigger-font {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
 
 .btn:link,
 .btn:visited {
@@ -204,6 +209,26 @@ strong {
     border-bottom: 1px solid transparent; /*removing underline when hovering*/
 }
 
+
+.list {
+    list-style: none; /*getting rid of the bullet points*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22; /*It could be stroke or fill, depending on the icon*/
+}
 
 
 
