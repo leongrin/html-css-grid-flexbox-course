@@ -415,6 +415,7 @@ both classes.*/
 
 .pricing {
     padding: 9.6rem 0;
+    margin-bottom: 9.6rem;
 }
 
 .price-cards {
@@ -424,9 +425,7 @@ both classes.*/
 }
 
 .price-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     max-width: 40rem;
     border: 2px solid #fdf2e9;
     border-radius: 11px;
@@ -438,13 +437,15 @@ both classes.*/
 }
 
 .price-card--starter {
-    margin-left: auto;
-    margin-right: 0;
+    /*margin-left: auto;
+    margin-right: 0;*/
+    justify-self: end;
 }
 
 .price-card--complete {
-    margin-left: 0;
-    margin-right: auto;
+    /*margin-left: 0;
+    margin-right: auto;*/
+    justify-self: start;
     position: relative;
     overflow: hidden;
 }
@@ -465,7 +466,7 @@ both classes.*/
 
 .price-text--footnote {
     text-align: center;
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     margin-bottom: 10rem;
 }
 
@@ -494,7 +495,7 @@ both classes.*/
     text-align: center;
     color: black;
     position: absolute;
-    top: 6%;
+    top: 6%; /*Use percentage when building a flexible layout*/
     right: -20%;
     transform: rotate(45deg);
 }
@@ -531,6 +532,143 @@ both classes.*/
     font-size: 1.8rem;
     line-height: 1.8;
 }
+
+
+/****************************************************************************/
+/*CALL TO ACTION*/
+/****************************************************************************/
+
+.cta-section {
+    /*display: grid;
+    grid-template-columns: 1.4fr 0.6fr;*/
+    margin-bottom: 4.2rem;
+    /*padding: 9.6rem 0;*/
+    /*background-color: #e67e22;*/
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
+    border-radius: 11px;
+    /*background-color: #e67e22;*/
+    background-image: linear-gradient(to right bottom,
+    #eb984e, #e67e22);
+    overflow: hidden; /*For the image not to overflow the border*/
+}
+
+
+.cta-text-box {
+    display: flex;
+    flex-direction: column;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta-heading {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+    color: #45260a;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #45260a;
+    margin-bottom: 4.8rem;
+}
+
+
+.cta-img-box {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(235, 151, 78, 0.35),
+            rgba(230, 125, 34, 0.35)
+    ),
+    url(../img/eating.jpg
+    );
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.2rem;
+    font-family: inherit; /*Inherit the Body's font family (parent)*/
+    background-color: #fdf2e9;
+    color: inherit; /*inherit from the parent box*/
+    border-radius: 9px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*Sudo element do not exist on the page but we can select its styles*/
+.cta-form input::placeholder {
+    color: #aaa;
+}
+
+
+/****************************************************************************/
+/*FOOTER*/
+/****************************************************************************/
+
+.section-footer {
+    padding: 9.6rem 0;
+}
+
+.footer-line {
+    /*font-weight: 100;*/
+    color: #f5f2f2;
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    margin-bottom: 9rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 6rem;
+}
+
+.footer-cols {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.footer-cols img {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 4rem;
+}
+
+.social-icon {
+    font-size: 2.4rem;
+}
+
+
+
+
+
+
 
 
 
