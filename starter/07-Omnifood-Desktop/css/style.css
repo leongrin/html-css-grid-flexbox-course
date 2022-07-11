@@ -636,40 +636,65 @@ both classes.*/
     /*font-weight: 100;*/
     color: #f5f2f2;
     border-bottom: 1px solid rgba(255, 255, 255, .25);
-    margin-bottom: 9rem;
+    margin-bottom: 12.8rem;
 }
 
 .grid-footer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1.2fr 1.2fr 1fr 1fr 1fr;
     column-gap: 6rem;
 }
 
 .footer-cols {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
 }
 
 .footer-cols img {
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .social-icons {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
+    margin-bottom: 8rem;
 }
 
 .social-icon {
     font-size: 2.4rem;
+    color: #777;
+}
+
+.copyright {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
 }
 
 
+.footer-text {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #777;
+    margin-bottom: 2rem;
+}
 
+.footer-text a {
+    text-decoration: none;
+    color: #777;
+}
 
-
-
-
+.footer-text--address {
+    margin-bottom: 3rem;
+}
 
 
 
