@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="css/general.css">
     <title>Omnifood</title>
 </head>
+
 <body>
     <header class="header">
-        <img class="logo" src="img/omnifood-logo.png" alt="Omnifood logo">
+        <a href="#">
+            <img class="logo" src="img/omnifood-logo.png" alt="Omnifood logo">
+        </a>
+
 
         <nav class="top-nav">
             <ul class="top-nav-list">
@@ -544,12 +548,22 @@
             <div class="grid-footer">
 
                 <div class="footer-cols">
-                    <img src="img/omnifood-logo.png" alt="">
-                    <div class="social-icons">
-                        <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
-                        <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
-                        <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
-                    </div>
+                    <a href="#" class="footer-logo">
+                        <img src="img/omnifood-logo.png" alt="">
+                    </a>
+
+                    <ul class="social-icons">
+                        <a href="#">
+                            <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+                        </a>
+                    </ul>
+
                     <div class="copyright">
                         Copyright &copy; 2027 by Omnifood, Inc. All rights reserved.
                     </div>
@@ -563,30 +577,33 @@
                         623 Harrison St., 2nd Floor, San Francisco, CA 94107
                     </p>
                     <p class="footer-text">
-                        415-201-6370
-                        hello@omnifood.com
+                        <a href="tel:415-201-6370">415-201-6370</a>
+                        <a href="mailto:hello@omnifood.com">hello@omnifood.com</a>
                     </p>
                 </div>
 
-                <div class="footer-cols">
+                <nav class="footer-cols">
                     <h2 class="footer-heading">
                         Account
                     </h2>
-                    <p class="footer-text">
-                        <a href="#">Create account</a>
-                    </p>
-                    <p class="footer-text">
-                        <a href="#">Sign in</a>
-                    </p>
-                    <p class="footer-text">
-                        <a href="#">iOS app</a>
-                    </p>
-                    <p class="footer-text">
-                        <a href="#">Android app</a>
-                    </p>
-                </div>
+                    <ul class="footer-text">
+                        <li class="footer-text">
+                            <a href="#">Create account</a>
+                        </li>
+                        <li class="footer-text">
+                            <a href="#">Sign in</a>
+                        </li>
+                        <li class="footer-text">
+                            <a href="#">iOS app</a>
+                        </li>
+                        <li class="footer-text">
+                            <a href="#">Android app</a>
+                        </li>
+                    </ul>
 
-                <div class="footer-cols">
+                </nav>
+
+                <nav class="footer-cols">
                     <h2 class="footer-heading">
                         Company
                     </h2>
@@ -602,9 +619,9 @@
                     <p class="footer-text">
                         <a href="#">Careers</a>
                     </p>
-                </div>
+                </nav>
 
-                <div class="footer-cols">
+                <nav class="footer-cols">
                     <h2 class="footer-heading">
                         Resources
                     </h2>
@@ -617,7 +634,7 @@
                     <p class="footer-text">
                         <a href="#">Privacy & terms</a>
                     </p>
-                </div>
+                </nav>
 
             </div>
         </div>

@@ -685,6 +685,7 @@ both classes.*/
     line-height: 1.8;
     color: #777;
     margin-bottom: 2rem;
+    list-style: none;
 }
 
 .footer-text a {
