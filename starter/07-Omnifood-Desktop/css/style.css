@@ -415,7 +415,7 @@ both classes.*/
 
 .pricing {
     padding: 9.6rem 0;
-    margin-bottom: 9.6rem;
+    /*margin-bottom: 9.6rem;*/
 }
 
 .price-cards {
@@ -541,15 +541,14 @@ both classes.*/
 .cta-section {
     /*display: grid;
     grid-template-columns: 1.4fr 0.6fr;*/
-    margin-bottom: 4.2rem;
-    /*padding: 9.6rem 0;*/
+    padding: 4.2rem 0 12.8rem 0;
     /*background-color: #e67e22;*/
 }
 
 .cta-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
+    box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
     border-radius: 11px;
     /*background-color: #e67e22;*/
     background-image: linear-gradient(to right bottom,
@@ -629,7 +628,8 @@ both classes.*/
 /****************************************************************************/
 
 .section-footer {
-    padding: 9.6rem 0;
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
 }
 
 .footer-line {
@@ -641,24 +641,23 @@ both classes.*/
 
 .grid-footer {
     display: grid;
-    grid-template-columns: 1.2fr 1.2fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1.2fr 1fr 1fr 1fr;
     column-gap: 6rem;
 }
 
 .footer-cols {
     display: flex;
     flex-direction: column;
+    gap: 4rem
 }
 
 .footer-cols img {
     width: 100%;
-    margin-bottom: 4rem;
 }
 
 .social-icons {
     display: flex;
     gap: 2rem;
-    margin-bottom: 8rem;
 }
 
 .social-icon {
@@ -671,31 +670,54 @@ both classes.*/
     line-height: 1.4;
     color: #777;
     letter-spacing: 1px;
+    margin-top: auto;
 }
 
 .footer-heading {
     font-size: 1.8rem;
     font-weight: 500;
-    margin-bottom: 4rem;
 }
 
-
-.footer-text {
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     font-size: 1.6rem;
     line-height: 1.8;
-    color: #777;
-    margin-bottom: 2rem;
-    list-style: none;
+    color: #767676;
 }
 
-.footer-text a {
-    text-decoration: none;
-    color: #777;
-}
-
-.footer-text--address {
+.footer-contact--address {
     margin-bottom: 3rem;
 }
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #767676;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer-links--contact {
+    gap: 0;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+    text-decoration: none;
+    color: #767676;
+    transition: all 0.4s;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+    color: #e67e22;
+}
+
 
 
 
