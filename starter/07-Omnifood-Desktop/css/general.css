@@ -58,6 +58,7 @@ Default: 9px;
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden; /* to avoid items overflowing laterally. Avoid lateral scroll. */
 }
 
 body {
@@ -65,6 +66,7 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+    overflow-x: hidden; /* to avoid items overflowing laterally. Avoid lateral scroll. */
 }
 
 /****************************************************************************/
@@ -89,15 +91,15 @@ body {
 
 /*Double hyphen (dash) to show it's a variation of a class*/
 .grid--2-columns {
-    grid-template-columns: repeat(2, 1fr); /*The exact thing as witting 1fr 1fr*/;
+    grid-template-columns: repeat(2, 1fr); /*The exact thing as writing 1fr 1fr*/;
 }
 
 .grid--3-columns {
-    grid-template-columns: repeat(3, 1fr); /*The exact thing as witting 1fr 1fr 1fr*/;
+    grid-template-columns: repeat(3, 1fr); /*The exact thing as writing 1fr 1fr 1fr*/;
 }
 
 .grid--4-columns {
-    grid-template-columns: repeat(4, 1fr); /*The exact thing as witting 1fr 1fr 1fr 1fr*/;
+    grid-template-columns: repeat(4, 1fr); /*The exact thing as writing 1fr 1fr 1fr 1fr*/;
 }
 
 .grid-center-vertically {

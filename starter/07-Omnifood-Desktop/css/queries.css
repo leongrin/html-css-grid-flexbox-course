@@ -1,11 +1,12 @@
 /* rem and em do NOT depend on html font-size on media queries
 Instead, 1rem = 1em = 16px
 To convert px to em, dive by 16. Ex: 1350px / 16 = 84
+If you are on a Ultrawide monitor, divide by 17
 */
 
 
 /***************************************/
-/* BELOW 1344px (Smaller Desktops) */
+/* BELOW 1344px / 1430px (Smaller Desktops) */
 /***************************************/
 @media (max-width: 84em) {
 
@@ -64,9 +65,162 @@ To convert px to em, dive by 16. Ex: 1350px / 16 = 84
 }
 
 
+/***************************************/
+/* BELOW 1055px (In Ultrawide monitor (divide by 17) for TABLETS) 1055 / 17 = 62em */
+/***************************************/
+
+@media (max-width: 62em) {
+    html {
+        /* 8px / 16 = 0.5 = 50%*/
+        font-size: 50%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+    }
+
+    .hero-image {
+        width: 60%;
+    }
+
+    .hero-text-box,
+    .hero-image-box {
+        text-align: center;
+    }
+
+    .delivered-meals {
+        justify-content: center;
+        margin-top: 6.4rem;
+    }
+
+    .logos {
+        gap: 3rem;
+    }
+
+    .logo-img {
+        /*width: 10%;*/
+        height: 2.4rem;
+    }
 
 
+    .step-number {
+        font-size: 7.4rem;
+    }
 
+    .meal-info {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .price-benefits {
+        line-height: 1.2;
+    }
+
+    .cta-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn--form {
+        margin-top: 1.2rem;
+    }
+
+    .btn-mobile-nav {
+        display: block;
+    }
+
+    header {
+        position: relative; /* to make position absolute from top-nav works */
+    }
+
+    .top-nav {
+        background-color: rgba(255, 255, 255, 0.97);
+        position: absolute; /*in relative to the viewport, so no other class or tag should have position relative to this*/
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /*vh => viewport height units*/
+        /* transform is a great property for animation */
+        transform: translateX(100%); /* Move the mobile navigation to the right */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* ease-in starts slow and end fast */
+        /* ease-out starts fast and end slowly */
+        transition: all 0.5s ease-out;
+
+        /* Hide Navigation method that allows no transition */
+        /*display: none;*/
+
+        /*An alternative to hide an element that allows animation*/
+        opacity: 0;
+        /* Make it inaccessible to mouse and keyboard */
+        pointer-events: none;
+        /* Hide from screen readers */
+        visibility: hidden;
+
+    }
+
+    .top-nav-list {
+        flex-direction: column;
+    }
+
+    .top-nav-link:link,
+    .top-nav-link:visited {
+        font-size: 3rem;
+    }
+
+    .nav-open .top-nav {
+        opacity: 1;
+        pointer-events: auto; /* re-enable pointers */
+        visibility: visible; /* re-enable visibility to screen readers*/
+        transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+        display: block; /* re-enable visibility of the close X icon */
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+        display: none; /* Hide the menu icon */
+    }
+
+}
+
+
+/***************************************/
+/* BELOW 700px (SMALLER TABLETS) 700 / 17 = 41em */
+/***************************************/
+
+@media (max-width: 41em) {
+
+    .grid--3-columns {
+        grid-template-columns: repeat(2, 1fr); /*The exact thing as witting 1fr 1fr 1fr*/;
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diet-cards {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+
+}
 
 
 

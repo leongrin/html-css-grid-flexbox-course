@@ -63,6 +63,28 @@ both classes.*/
 
 
 /****************************************************************************/
+/* MOBILE NAV */
+/****************************************************************************/
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none; /*by default, for normal width, the mobile nav is none*/
+}
+
+.icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+    display: none;
+}
+
+
+/****************************************************************************/
 /*Hero Section*/
 /****************************************************************************/
 
@@ -71,17 +93,13 @@ both classes.*/
     padding: 4.8rem 0 9.6rem 0;
 }
 
-@media (max-width: 1200px) {
-
-}
-
 .hero-container {
     max-width: 130rem;
     /*It's a good practice to let the hero section be slightly larger
        than the default container width of 120rem*/
     margin: 0 auto; /*trick to center element;*/
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 9.6rem;
     padding: 0 3.2rem;
@@ -131,6 +149,38 @@ both classes.*/
 .delivered-text span {
     color: #cf711f;
     font-weight: 700;
+}
+
+
+/****************************************************************************/
+/*FEATURED IN*/
+/****************************************************************************/
+
+.section-featured {
+    padding: 4.8rem 0 3.2rem 0; /*Top 4.8, bottom 3.2*/
+}
+
+.logos {
+    display: flex;
+    gap: 6rem;
+    justify-content: space-around;
+    filter: brightness(0); /*make the images totally black*/
+    opacity: 50%; /*it makes the images gray (from black)*/
+}
+
+.logo-img {
+    /*width: 10%;*/
+    height: 3.2rem;
+}
+
+.heading-featured-in {
+    font-size: 1.4rem;
+    margin-bottom: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999; /*000 is totally black. Going up decreases the blackness*/
+    letter-spacing: 1px;
 }
 
 
@@ -217,38 +267,6 @@ both classes.*/
 .how-it-works div:nth-child(4) {
     background-color: yellow
 }*/
-
-
-/****************************************************************************/
-/*FEATURED IN*/
-/****************************************************************************/
-
-.section-featured {
-    padding: 4.8rem 0 3.2rem 0; /*Top 4.8, bottom 3.2*/
-}
-
-.logos {
-    display: flex;
-    gap: 6rem;
-    justify-content: space-around;
-    filter: brightness(0); /*make the images totally black*/
-    opacity: 50%; /*it makes the images gray (from black)*/
-}
-
-.logo-img {
-    /*width: 10%;*/
-    height: 3.2rem;
-}
-
-.heading-featured-in {
-    font-size: 1.4rem;
-    margin-bottom: 2.4rem;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    color: #999; /*000 is totally black. Going up decreases the blackness*/
-    letter-spacing: 1px;
-}
 
 
 /****************************************************************************/
@@ -429,7 +447,7 @@ both classes.*/
 }
 
 .price-card {
-    text-align: center;
+    /*text-align: center;*/
     max-width: 40rem;
     border: 2px solid #fdf2e9;
     border-radius: 11px;
@@ -485,7 +503,7 @@ both classes.*/
     font-size: 1.8rem;
     display: flex;
     gap: 2rem;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 .price-card--complete::after {
