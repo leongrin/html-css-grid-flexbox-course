@@ -667,11 +667,13 @@ both classes.*/
     column-gap: 6rem;
 }
 
-.footer-cols {
+.footer-cols,
+.nav-cols {
     display: flex;
     flex-direction: column;
-    gap: 4rem
+    gap: 4rem;
 }
+
 
 .footer-cols img {
     width: 100%;

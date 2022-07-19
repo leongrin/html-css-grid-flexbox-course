@@ -201,10 +201,10 @@ If you are on a Ultrawide monitor, divide by 17
 
 
 /***************************************/
-/* BELOW 700px (SMALLER TABLETS) 700 / 17 = 41em */
+/* BELOW 704px (SMALLER TABLETS) 700 / 16 = 44em */
 /***************************************/
 
-@media (max-width: 41em) {
+@media (max-width: 44em) {
 
     .grid--3-columns {
         grid-template-columns: repeat(2, 1fr); /*The exact thing as witting 1fr 1fr 1fr*/;
@@ -214,9 +214,34 @@ If you are on a Ultrawide monitor, divide by 17
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .diet-cards {
-        grid-column: 1 / -1;
-        justify-self: center;
+    .diet {
+        grid-column: 1 / -1; /* to occupy the entire space of the page */
+        justify-self: center; /* center horizontally in an individual grid item */
+    }
+
+    .heading-secondary {
+        margin-bottom: 4.8rem;
+    }
+
+    .nav-cols {
+        grid-row: 1; /* move these classes from second row to row 1 */
+        /* each column use 2 columns, so 3 columns in total */
+        grid-column: span 2;
+        margin-bottom: 9.6rem;
+    }
+
+    .footer-cols {
+        /* each column use 3 columns, so 2 columns in total */
+        grid-column: span 3;
+    }
+
+    .grid-footer {
+        /* create 6 columns to divide the spaces for each column on  span */
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .footer-cols img {
+        width: 70%;
     }
 
 
