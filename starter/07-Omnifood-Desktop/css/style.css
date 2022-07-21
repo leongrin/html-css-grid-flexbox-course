@@ -162,7 +162,7 @@ both classes.*/
 
 .logos {
     display: flex;
-    gap: 6rem;
+    /*gap: 6rem;*/
     justify-content: space-around;
     filter: brightness(0); /*make the images totally black*/
     opacity: 50%; /*it makes the images gray (from black)*/
@@ -654,6 +654,7 @@ both classes.*/
     border-top: 1px solid #eee;
 }
 
+/* The line to separate sections */
 .footer-line {
     /*font-weight: 100;*/
     color: #f5f2f2;
