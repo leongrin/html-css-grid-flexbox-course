@@ -58,6 +58,7 @@ Default: 9px;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth; /* animate scrolling */
     overflow-x: hidden; /* to avoid items overflowing laterally. Avoid lateral scroll. */
 }
 
