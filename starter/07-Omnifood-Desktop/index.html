@@ -6,6 +6,15 @@
     <!-- ALWAYS INCLUDE THIS LINE OF CODE FOR RESPONSIVE DESIGNS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description"
+          content="Omnifood is AI-powered food subscription that will make
+          you eat healthy again, 365 days per year.">
+
+    <link rel="icon" href="img/favicon-64.png">
+
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
@@ -16,7 +25,7 @@
     <link rel="stylesheet" href="css/queries.css">
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script defer src="js/script.js"></script>
-    <title>Omnifood</title>
+    <title>Omnifood &dash; Never Cook Again</title>
 </head>
 
 <body>
@@ -83,7 +92,16 @@
                     </div>
                 </div>
                 <div class="hero-image-box">
-                    <img class="hero-image" src="img/hero.png" alt="hero img">
+
+                    <!-- Mechanism to have a fallback if the best image format can't be displayed " -->
+                    <picture>
+                        <source srcset="img/hero.webp" type="image/webp">
+                        <source srcset="img/hero.png" type="image/png">
+
+                        <!-- Always add the fallback image here -->
+                        <img class="hero-image" src="img/hero.png" alt="hero img">
+                    </picture>
+
                 </div>
             </div>
         </section>
